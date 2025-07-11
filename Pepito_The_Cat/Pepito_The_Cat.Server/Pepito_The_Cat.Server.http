@@ -1,0 +1,6 @@
+@Pepito_The_Cat.Server_HostAddress = http://localhost:5144
+
+GET {{Pepito_The_Cat.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
