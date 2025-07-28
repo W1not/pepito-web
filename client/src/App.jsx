@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './App.css'
 
 function EventLog() {
   const [events, setEvents] = useState([]);
@@ -40,11 +41,12 @@ function EventLog() {
   }, []);
 
   return (
-    <div>
-      <h2>Eventos en tiempo real</h2>
-      <div id="event-log">
-        {events.map((e, index) => (
-          <p key={index}>
+    <div class="">
+      
+      <h2 class="text-2xl text-amber-50 m-3">Eventos en tiempo real</h2>
+      <div id="event-log" class="">
+        {events.slice(-8).map((e, index) => (
+          <p class="flex flex-col-reverse text-amber-50 rounded-xl m-3 p-4 w-max shadow-lg shadow-blue-500/50" key={index}>
             Evento: {e.event} , Hora: {e.time}
           </p>
         ))}
